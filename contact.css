@@ -1,0 +1,61 @@
+.contact-box{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+
+
+
+.contact-box h2{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-box h3{
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    background-color: #cccccc;
+    padding-left: 40px;
+}
+
+.contact-box p{
+    margin-left: 40px;
+}
+
+.contact-box .kome{
+    color: red;
+}
+
+.contact-box input{
+    width: 95%;
+    padding: 10px 3px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.contact-box label{
+    margin-left: 40px;
+}
+
+.contact-box textarea{
+    width: 100%;
+    height: 35vh;
+    border-radius: 10px;
+    border: 1px solid;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.contact-box button{
+    width: 95%;
+    color: white;
+    background-color: rgb(215, 4, 102);
+    padding: 10px 3px;
+    border: 1px solid;
+    border-radius: 10px;
+}
