@@ -1,0 +1,79 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['formData'])) {
+    header("Location: contact_form.php");
+    exit;
+}
+
+$formData = $_SESSION['formData'];
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['back'])) {
+        header("Location: contact_form.php");
+        exit;
+    }
+
+    if (isset($_POST['submit'])) {
+        $dsn = 'mysql:host=mysql;dbname=cafe;charset=utf8';
+        $user = 'root';
+        $password = 'root';
+
+        try {
+            $pdo = new PDO($dsn, $user, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $stmt = $pdo->prepare("INSERT INTO contacts (name, kana, tel, email, body) VALUES (:name, :kana, :tel, :email, :body)");
+            $stmt->bindParam(':name', $formData['name']);
+            $stmt->bindParam(':kana', $formData['kana']);
+            $stmt->bindParam(':tel', $formData['tel']);
+            $stmt->bindParam(':email', $formData['email']);
+            $stmt->bindParam(':body', $formData['body']);
+            $stmt->execute();
+
+            unset($_SESSION['formData']);
+            header("Location: complete.php");
+            exit;
+        } catch (PDOException $e) {
+            echo 'データベースエラー：' . $e->getMessage();
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>確認画面</title>
+    <link rel="stylesheet" type="text/css" href="confirm.css">
+</head>
+
+<body>
+    <div class="contact-box">
+        <h2>確認画面</h2>
+        <p>下記の内容を確認の上送信ボタンを押してください</p>
+        <p>内容を訂正する場合は戻るを押してください。</p>
+        <form action="confirm.php" method="post">
+            <dl>
+                <dt>氏名</dt>
+                <dd><?php echo htmlspecialchars($formData['name'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dt>フリガナ</dt>
+                <dd><?php echo htmlspecialchars($formData['kana'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dt>電話番号</dt>
+                <dd><?php echo htmlspecialchars($formData['tel'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dt>メールアドレス</dt>
+                <dd><?php echo htmlspecialchars($formData['email'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dt>お問い合わせ内容</dt>
+                <dd><?php echo nl2br(htmlspecialchars($formData['body'], ENT_QUOTES, 'UTF-8')); ?></dd>
+            </dl>
+            <div class="button">
+                <button type="submit" name="back">戻る</button>
+                <button type="submit" name="submit">送信</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

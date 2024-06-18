@@ -1,0 +1,458 @@
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+.colona{
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    background-color: black;
+    width: 100%;
+    top: 0;
+    padding: 18px;
+}
+
+.colona a{
+    color: white;
+    padding-top: 20px;
+}
+
+
+
+.overlay {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 40%; 
+    opacity: 1;
+    z-index: 999;
+}
+
+.login-content h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.login-content dd input{
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: -40px;
+}
+
+.login-content dd button{
+    color: white;
+    background-color: rgb(215, 4, 102);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: -40px;
+}
+
+.login-content .sns dd button{
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2.5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-content .sns dd img{
+    width: 2.0rem;
+}
+
+.sns{
+    background-color: white;
+}
+
+.show {
+    display: flex; 
+} 
+
+.eye{
+    position: relative;
+}
+
+.eye img{
+    position: absolute;
+    top: -52px;
+    z-index: 1;
+   filter: opacity(80%);
+   width: 110%;
+   height: 90vh;
+}
+
+.anata{
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    color: white;
+    z-index: 1;
+}
+
+.car {
+    position: relative;
+}
+
+.info-photo img{
+    position: absolute;
+    top: 85vh;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.info-text{
+    position: absolute;
+    top: 83.5vh;
+    left: 110px;
+    font-weight: bold;
+}
+
+.info-photo2 img{
+    position: absolute;
+    top: 85vh;
+    left: 20vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text2{
+    position: absolute;
+    top: 83.5vh;
+    left: 25vw;
+    font-weight: bold;
+}
+
+.info-photo3 img{
+    position: absolute;
+    top: 85vh;
+    left: 40vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text3{
+    position: absolute;
+    top: 83.5vh;
+    left: 45vw;
+    font-weight: bold;
+}
+
+.info-photo4 img{
+    position: absolute;
+    top: 85vh;
+    left: 60vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text4{
+    position: absolute;
+    top: 83.5vh;
+    left: 65vw;
+    font-weight: bold;
+}
+
+.info-photo5 img{
+    position: absolute;
+    top: 97vh;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text5{
+    position: absolute;
+    top: 96vh;
+    left: 110px;
+    font-weight: bold;
+}
+
+.info-photo6 img{
+    position: absolute;
+    top: 97vh;
+    left: 20vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text6{
+    position: absolute;
+    top: 96vh;
+    left: 25vw;
+    font-weight: bold;
+}
+
+.info-photo7 img{
+    position: absolute;
+    top: 97vh;
+    left: 40vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}    
+    
+.info-text7{
+    position: absolute;
+    top: 96vh;
+    left: 45vw;
+    font-weight: bold;
+}
+
+.loke{
+    position: relative;
+}
+
+.suki{
+    position: absolute;
+    top: 115vh;
+    left: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.intro1-photo img{
+    position: absolute;
+    top: 126vh;
+    left: 45px;
+    width: 48vh;
+    height: 30vh;
+    border-radius: 10px;
+}    
+    
+.intro1-text{
+    position: absolute;
+    top: 155vh;
+    left: 42px;
+    font-weight: bold;
+}
+
+.intro2-photo img{
+    position: absolute;
+    top: 126vh;
+    left: 26vw;
+    width: 48vh;
+    height: 30vh;
+    border-radius: 10px;
+}    
+    
+.intro2-text{
+    position: absolute;
+    top: 155vh;
+    left: 26vw;
+    font-weight: bold;
+}
+
+.intro3-photo img{
+    position: absolute;
+    top: 126vh;
+    left: 49vw;
+    width: 48vh;
+    height: 30vh;
+    border-radius: 10px;
+}    
+    
+.intro3-text{
+    position: absolute;
+    top: 155vh;
+    left: 49vw;
+    font-weight: bold;
+}
+
+.intro4-photo img{
+    position: absolute;
+    top: 126vh;
+    left: 72vw;
+    width: 48vh;
+    height: 30vh;
+    border-radius: 10px;
+}    
+    
+.intro4-text{
+    position: absolute;
+    top: 155vh;
+    left: 73vw;
+    font-weight: bold;
+}
+
+
+
+.goto-photo img{
+    position:absolute;
+    top:170vh;
+    left:3vw;
+    border-radius:10px;
+    width:93%;
+} 
+
+
+
+.goto-text1{
+    position:absolute;
+    top:175vh;
+    left:8vw;
+    font-weight:bold;
+    font-size:40px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+    width:27.6%;
+    height:8.2%
+}
+
+.goto-text2{
+    position:absolute;
+    top:187vh;
+    left:8vw;
+    font-size:15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.cafe {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    top: 245vh;
+}
+
+.cafe-text {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+
+.cafe-text h2{
+    font-size: 32px;
+}
+
+.cafe-photos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.cafe-photo {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.cafe-photo img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.cafe-photo p {
+    color: white;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.host h2{
+    position:absolute;
+    top:365vh;
+    left:2.5vw;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.host1-photo img{
+    position:absolute;
+    top:380vh;
+    left:2.5vw;
+    border-radius: 10px;
+    width: 30%;
+    height: 40vh;
+}
+
+.host1-text{
+    position:absolute;
+    top:420vh;
+    left:2.5vw;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.host2-photo img{
+    position:absolute;
+    top:380vh;
+    left:34vw;
+    border-radius: 10px;
+    width: 30%;
+    height: 40vh;
+}
+
+.host2-text{
+    position:absolute;
+    top:420vh;
+    left:34vw;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.host3-photo img{
+    position:absolute;
+    top:380vh;
+    left:65vw;
+    border-radius: 10px;
+    width: 30%;
+    height: 40vh;
+}
+
+.host3-text{
+    position:absolute;
+    top:420vh;
+    left:65vw;
+    font-size: 18px;
+    font-weight: bold;
+}

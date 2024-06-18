@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    position: absolute;
+    top: 440vh;
+    padding: 20px 50px;
+    background-color: #f8f8f8;
+    width: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.line {
+    width: 100%;
+    height: 0.5px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.prai {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+
+.riyou {
+    margin-top: 10px;
+}
+
+.riyou a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.riyou a:hover{
+    color: #999;
+}
+
+.lin {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.comyu{
+    margin-left: 80px;
+}
+
+.host2{
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.batu h2{
+    font-size: 15px;
+    top: 0;
+    left: 50.7vw;
+}
+
+.saport{
+    margin-left: 80px;
+}
+
+.jump{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 10px;
+    width: 6%;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.jump a{
+    color: white;
+}
