@@ -14,7 +14,7 @@
     <div class="hea-text">
         <a href="#" id="scrollToStart">はじめに</a>
         <a href="#" id="scrollToStart2">体験</a>
-        <a href="contact.php">お問い合わせ</a>
+        <a href="contact_form.php">お問い合わせ</a>
     </div>
 
     <div class="sign">

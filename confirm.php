@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['formData'])) {
-    header("Location: contact.php");
+    header("Location: contact_form.php");
     exit;
 }
 
@@ -10,18 +10,33 @@ $formData = $_SESSION['formData'];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['back'])) {
-        header("Location: contact.php");
+        header("Location: contact_form.php");
         exit;
     }
 
     if (isset($_POST['submit'])) {
-        // 実際の処理（例：データベースへの保存、メール送信など）
-        // ここにデータベースへの保存やメール送信などの処理を記述することができます。
-        
-        // 完了画面へリダイレクト
-        unset($_SESSION['formData']);
-        header("Location: complete.php");
-        exit;
+        $dsn = 'mysql:host=mysql;dbname=cafe;charset=utf8';
+        $user = 'root';
+        $password = 'root';
+
+        try {
+            $pdo = new PDO($dsn, $user, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $stmt = $pdo->prepare("INSERT INTO contacts (name, kana, tel, email, body) VALUES (:name, :kana, :tel, :email, :body)");
+            $stmt->bindParam(':name', $formData['name']);
+            $stmt->bindParam(':kana', $formData['kana']);
+            $stmt->bindParam(':tel', $formData['tel']);
+            $stmt->bindParam(':email', $formData['email']);
+            $stmt->bindParam(':body', $formData['body']);
+            $stmt->execute();
+
+            unset($_SESSION['formData']);
+            header("Location: complete.php");
+            exit;
+        } catch (PDOException $e) {
+            echo 'データベースエラー：' . $e->getMessage();
+        }
     }
 }
 ?>
@@ -31,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <head>
     <meta charset="UTF-8">
-    <title>Confirm</title>
+    <title>確認画面</title>
     <link rel="stylesheet" type="text/css" href="confirm.css">
 </head>
 
@@ -47,11 +62,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <dt>フリガナ</dt>
                 <dd><?php echo htmlspecialchars($formData['kana'], ENT_QUOTES, 'UTF-8'); ?></dd>
                 <dt>電話番号</dt>
-                <dd><?php echo htmlspecialchars($formData['tell'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dd><?php echo htmlspecialchars($formData['tel'], ENT_QUOTES, 'UTF-8'); ?></dd>
                 <dt>メールアドレス</dt>
-                <dd><?php echo htmlspecialchars($formData['mail'], ENT_QUOTES, 'UTF-8'); ?></dd>
+                <dd><?php echo htmlspecialchars($formData['email'], ENT_QUOTES, 'UTF-8'); ?></dd>
                 <dt>お問い合わせ内容</dt>
-                <dd><?php echo nl2br(htmlspecialchars($formData['otoi'], ENT_QUOTES, 'UTF-8')); ?></dd>
+                <dd><?php echo nl2br(htmlspecialchars($formData['body'], ENT_QUOTES, 'UTF-8')); ?></dd>
             </dl>
             <div class="button">
                 <button type="submit" name="back">戻る</button>
