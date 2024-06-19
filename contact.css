@@ -43,11 +43,11 @@
 }
 
 .contact-box textarea{
-    width: 100%;
+    width: 96%;
     height: 35vh;
     border-radius: 10px;
     border: 1px solid;
-    resize: vertical;
+    resize: none;
     box-sizing: border-box;
 }
 
