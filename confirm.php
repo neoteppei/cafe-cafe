@@ -31,14 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>お問い合わせ確認</title>
-    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="confirm.css">
 </head>
+
 <body>
     <div class="contact-box">
-        <h2>お問い合わせ内容確認</h2>
+        <h2>お問い合わせ</h2>
+        <p>下記の内容をご確認の上送信ボタンを押してください</p>
+        <p>内容を訂正する場合は戻るを押してください。</p>
         <form action="confirm.php" method="post">
             <dl>
                 <dt>氏名</dt>
@@ -56,9 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <dt>お問い合わせ内容</dt>
                 <dd><?php echo nl2br(sanitize($formData['body'])); ?></dd>
             </dl>
-            <button type="submit">送信</button>
-            <button type="button" onclick="history.back();">戻る</button>
+            <dd class="button">
+                <button type="submit">送信</button>
+                <button type="button" onclick="history.back();" style="background-color:white; color:green; border: 2px solid green;">戻る</button>
+            </dd>
         </form>
     </div>
 </body>
+
 </html>

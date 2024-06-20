@@ -21,4 +21,3 @@ try {
 
 header("Location: contact_form.php");
 exit;
-?>

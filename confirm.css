@@ -18,13 +18,14 @@
 }
 
 .contact-box dt{
-    margin-top: 30px;
+    margin-top: 50px;
     border-bottom: 1px solid;
 }
 
 .button{
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
 }
 
 .contact-box button{

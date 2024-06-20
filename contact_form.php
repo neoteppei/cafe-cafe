@@ -60,6 +60,7 @@ $contacts = $pdo->query("SELECT * FROM contacts")->fetchAll(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>お問い合わせ</title>
@@ -70,10 +71,16 @@ $contacts = $pdo->query("SELECT * FROM contacts")->fetchAll(PDO::FETCH_ASSOC);
         }
     </style>
 </head>
+
 <body>
+
     <div class="contact-box">
         <h2>お問い合わせ</h2>
         <form action="contact_form.php" method="post">
+            <h3>下記の項目をご記入の上送信ボタンを押してください</h3>
+            <p>送信頂いた件につきましては、当社より折り返しご連絡を差し上げます。</p>
+            <p>なお、ご連絡までに、お時間を頂く場合もございますので予めご了承ください。</p>
+            <p><span class="kome">*</span>は必須項目となります。</p>
             <dl>
                 <dt><label for="name">氏名</label><span class="kome">*</span></dt>
                 <dd><input type="text" name="name" id="name" value="<?php echo sanitize($name); ?>"></dd>
@@ -91,7 +98,9 @@ $contacts = $pdo->query("SELECT * FROM contacts")->fetchAll(PDO::FETCH_ASSOC);
                 <dd><input type="text" name="email" id="email" value="<?php echo sanitize($email); ?>"></dd>
                 <?php if (!empty($errors['email'])) : ?><p class="error"><?php echo $errors['email']; ?></p><?php endif; ?>
 
-                <dt><label for="body">お問い合わせ内容</label><span class="kome">*</span></dt>
+                <dt>
+                    <h3><label for="body">お問い合わせ内容をご記入ください<span class="kome">*</span></label></h3>
+                </dt>
                 <dd><textarea name="body" id="body"><?php echo sanitize($body); ?></textarea></dd>
                 <?php if (!empty($errors['body'])) : ?><p class="error"><?php echo $errors['body']; ?></p><?php endif; ?>
 
@@ -136,5 +145,7 @@ $contacts = $pdo->query("SELECT * FROM contacts")->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
+    
 </body>
+
 </html>
