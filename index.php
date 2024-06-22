@@ -35,22 +35,22 @@
                 <dl class="sns">
                     <dd>
                         <button name="twitter">
-                            <img src="cafe/img/twitter.png">
+                            <img src="cafe/twitter.png">
                         </button>
                     </dd>
                     <dd>
                         <button name="facebook">
-                            <img src="cafe/img/fb.png">
+                            <img src="cafe/fb.png">
                         </button>
                     </dd>
                     <dd>
                         <button name="google">
-                            <img src="cafe/img/google.png">
+                            <img src="cafe/google.png">
                         </button>
                     </dd>
                     <dd>
                         <button name="apple">
-                            <img src="cafe/img/apple.png">
+                            <img src="cafe/apple.png">
                         </button>
                     </dd>
                 </dl>
@@ -59,7 +59,7 @@
     </div>
 
     <div class="eye">
-        <img src="cafe/img/eyecatch.jpg">
+        <img src="cafe/eyecatch.jpg">
     </div>
 
     <div class="anata">
@@ -69,49 +69,49 @@
     <div class="car">
         <div class="info">
             <div class="info-photo">
-                <img src="cafe/img/cafe1.jpg">
+                <img src="cafe/cafe1.jpg">
             </div>
             <div class="info-text">
                 <p>東京<br>車で15分</p>
             </div>
 
             <div class="info-photo2">
-                <img src="cafe/img/cafe2.jpg">
+                <img src="cafe/cafe2.jpg">
             </div>
             <div class="info-text2">
                 <p>神奈川<br>車で30分</p>
             </div>
 
             <div class="info-photo3">
-                <img src="cafe/img/cafe3.jpg">
+                <img src="cafe/cafe3.jpg">
             </div>
             <div class="info-text3">
                 <p>愛知<br>車で1時間</p>
             </div>
 
             <div class="info-photo4">
-                <img src="cafe/img/cafe4.jpg">
+                <img src="cafe/cafe4.jpg">
             </div>
             <div class="info-text4">
                 <p>京都<br>車で40分</p>
             </div>
 
             <div class="info-photo5">
-                <img src="cafe/img/cafe5.jpg">
+                <img src="cafe/cafe5.jpg">
             </div>
             <div class="info-text5">
                 <p>岡山<br>車で1.5時間</p>
             </div>
 
             <div class="info-photo6">
-                <img src="cafe/img/cafe6.jpg">
+                <img src="cafe/cafe6.jpg">
             </div>
             <div class="info-text6">
                 <p>鹿児島<br>車で50分</p>
             </div>
 
             <div class="info-photo7">
-                <img src="cafe/img/cafe7.jpg">
+                <img src="cafe/cafe7.jpg">
             </div>
             <div class="info-text7">
                 <p>沖縄<br>車で2時間</p>
@@ -125,28 +125,28 @@
 
 
             <div class="intro1-photo">
-                <img src="cafe/img/intro1.jpg">
+                <img src="cafe/intro1.jpg">
             </div>
             <div class="intro1-text">
                 <p>クラシック</p>
             </div>
 
             <div class="intro2-photo">
-                <img src="cafe/img/intro2.jpg">
+                <img src="cafe/intro2.jpg">
             </div>
             <div class="intro2-text">
                 <p>バー</p>
             </div>
 
             <div class="intro3-photo">
-                <img src="cafe/img/intro3.jpg">
+                <img src="cafe/intro3.jpg">
             </div>
             <div class="intro3-text">
                 <p>キャンプ</p>
             </div>
 
             <div class="intro4-photo">
-                <img src="cafe/img/intro4.jpg">
+                <img src="cafe/intro4.jpg">
             </div>
             <div class="intro4-text">
                 <p>リゾート</p>
@@ -155,7 +155,7 @@
 
         <div class="goto">
             <div class="goto-photo">
-                <img src="cafe/img/goto.jpg">
+                <img src="cafe/goto.jpg">
             </div>
 
             <div class="goto-text">
@@ -171,15 +171,15 @@
             </div>
             <div class="cafe-photos">
                 <div class="cafe-photo">
-                    <img src="cafe/img/exp1.jpg" alt="Job Experience">
+                    <img src="cafe/exp1.jpg" alt="Job Experience">
                     <p><span>ジョブ体験</span><br>カフェカウンターを体験しよう。</p>
                 </div>
                 <div class="cafe-photo">
-                    <img src="cafe/img/exp2.jpg" alt="Recipe Experience">
+                    <img src="cafe/exp2.jpg" alt="Recipe Experience">
                     <p><span>レシピ体験</span><br>美味しいレシピを考えてみよう。</p>
                 </div>
                 <div class="cafe-photo">
-                    <img src="cafe/img/exp3.jpg" alt="Promotion Experience">
+                    <img src="cafe/exp3.jpg" alt="Promotion Experience">
                     <p><span>プロモーション体験</span><br>お店の宣伝を手伝ってみよう。</p>
                 </div>
             </div>
@@ -190,21 +190,21 @@
             <h2>全国のホストに仲間入りしよう</h2>
 
             <div class="host1-photo">
-                <img src="cafe/img/host1.jpg">
+                <img src="cafe/host1.jpg">
             </div>
             <div class="host1-text">
                 <p>ビジネス</p>
             </div>
 
             <div class="host2-photo">
-                <img src="cafe/img/host2.jpg">
+                <img src="cafe/host2.jpg">
             </div>
             <div class="host2-text">
                 <p>コミュニティ</p>
             </div>
 
             <div class="host3-photo">
-                <img src="cafe/img/host3.jpg">
+                <img src="cafe/host3.jpg">
             </div>
             <div class="host3-text">
                 <p>食べ歩き</p>
